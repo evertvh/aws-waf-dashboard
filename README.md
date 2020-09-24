@@ -57,3 +57,13 @@ From the drop down list, select Kinesis Firehose which was created by template i
 That's all! Now, your WAF logs will be send from WAF service throug Kinesis Firehose directly to ElasticSearch cluster and will become available to you using Kibana dashboards. After a couple of minutes, you should start seeing that your dashboards have got data on it.
 
 <img src="graphics/7.png" width="700">
+
+
+#### 6. Bugfix
+
+In visiState, change every mention of "httpRequest.clientIp" to "httpRequest.clientIp.keyword" for the following Saved Objects:
+* Top10 IpAddresses
+* Filters
+* Unique IP count
+
+
